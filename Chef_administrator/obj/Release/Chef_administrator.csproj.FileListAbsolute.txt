@@ -1,0 +1,14 @@
+E:\Chef_administrator\Chef_administrator\obj\Release\Chef_administrator.csproj.AssemblyReference.cache
+E:\Chef_administrator\Chef_administrator\obj\Release\Chef_administrator.csproj.SuggestedBindingRedirects.cache
+E:\Chef_administrator\Chef_administrator\obj\Release\AddDishes.baml
+E:\Chef_administrator\Chef_administrator\obj\Release\AddCategory.g.cs
+E:\Chef_administrator\Chef_administrator\obj\Release\AddDishes.g.cs
+E:\Chef_administrator\Chef_administrator\obj\Release\AddIngredients.g.cs
+E:\Chef_administrator\Chef_administrator\obj\Release\Category.g.cs
+E:\Chef_administrator\Chef_administrator\obj\Release\Dishes.g.cs
+E:\Chef_administrator\Chef_administrator\obj\Release\Ingredients.g.cs
+E:\Chef_administrator\Chef_administrator\obj\Release\MainMenu.g.cs
+E:\Chef_administrator\Chef_administrator\obj\Release\MainWindow.g.cs
+E:\Chef_administrator\Chef_administrator\obj\Release\App.g.cs
+E:\Chef_administrator\Chef_administrator\obj\Release\Chef_administrator_MarkupCompile.cache
+E:\Chef_administrator\Chef_administrator\obj\Release\Chef_administrator_MarkupCompile.lref

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -81,6 +82,8 @@ namespace Chef_administrator
             SqlCommandBuilder comandbuilder = new SqlCommandBuilder(adapter);
             adapter.Update(ingredTable);
         }
+
+
         private void updateButton_Click(object sender, RoutedEventArgs e)
         {
             UpdateDB();
@@ -102,5 +105,37 @@ namespace Chef_administrator
             }
             UpdateDB();
         }
+
+     
+
+        private void AddButton_Click(object sender, RoutedEventArgs e)
+        {
+            AddIngredients bb=new AddIngredients();
+            bb.Show();
+            this.Close();
+        }
+
+        private void updateButton_Click1(object sender, RoutedEventArgs e)
+        {
+            MainMenu bb = new MainMenu();
+            bb.Show();
+            this.Close();
+        }
+
+        private void Button_Click_8(object sender, RoutedEventArgs e)
+        {
+          
+                string search = textBoxSearch.Text.Trim();
+                SqlConnection connection = null;
+                string sql = $"SELECT * FROM Ingredients WHERE Name LIKE '%{search}%'";
+                connection = new SqlConnection(connectionString);
+                SqlCommand command = new SqlCommand(sql, connection);
+                adapter = new SqlDataAdapter(command);
+                connection.Open();
+            ingredTable.Clear();
+                adapter.Fill(ingredTable);
+            
+        }
     }
+    
 }

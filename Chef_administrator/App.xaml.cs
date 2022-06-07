@@ -13,5 +13,8 @@ namespace Chef_administrator
     /// </summary>
     public partial class App : Application
     {
+        App()
+        {
+        }
     }
 }

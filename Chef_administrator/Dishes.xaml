@@ -2,26 +2,27 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+          xmlns:p = "clr-namespace:Chef_administrator.Properties"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Chef_administrator"
         mc:Ignorable="d"
                 xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         Title="Dishes" Height="720" Width="1080" Loaded="Window_Loaded">
     <Grid Background="White" Height="720" Width="1080">
-        <Button Content="Обновить"  FontSize="15" Click="updateButton_Click" Background="Green" Margin="511,25,444,669" Height="Auto"/>
-        <Button Content="Удалить"   FontSize="15" Click="deleteButton_Click" Background="Green" Margin="939,23,38,669" Height="Auto"/>
-        <Button Content="Сортировка по цене"   FontSize="15" Click="Button_Click_1" Background="Green" Margin="511,56,372,638" Height="Auto"/>
-        <Button Content="Сортировка по весу"  FontSize="15" Click="Button_Click_2" Background="Green" Margin="641,25,253,669" Height="Auto"/>
+        <Button Content="{x:Static p:Resources.Update}"  FontSize="15" Click="updateButton_Click" Background="Green" Margin="511,25,444,669" Height="Auto" Cursor="Hand"/>
+            <Button Content="{x:Static p:Resources.Delete}"   FontSize="15" Click="deleteButton_Click" Background="Green" Margin="939,23,38,669" Height="Auto"/>
+            <Button Content="{x:Static p:Resources.Sorted_by_weight}"  FontSize="15" Click="Button_Click_2" Background="Green" Margin="641,25,253,669" Height="Auto" Cursor="Hand"/>
+            <Button Content="{x:Static p:Resources.Sort_by_price}"  FontSize="15" Click="Button_Click_1" Background="Green" Margin="511,62,383,626" Height="Auto"/>
 
         <Border x:Name="s1"  Background="White"   HorizontalAlignment="Left" Width="506" >
 
             <DataGrid AutoGenerateColumns="False" x:Name="goodsGrid" Margin="0,0,-0.4,0" >
                 <DataGrid.Columns>
-                    <DataGridTextColumn Binding="{Binding Name}" Header="Название" Width="100"/>
-                    <DataGridTextColumn Binding="{Binding Weight}" Header="Вес" Width="100"/>
-                    <DataGridTextColumn Binding="{Binding Price}" Header="Цена" Width="100"/>
-                    <DataGridTextColumn Binding="{Binding Amount}" Header="Кол" Width="100"/>
-                    <DataGridTextColumn Binding="{Binding Category}" Header="Категория" Width="100"/>
+                    <DataGridTextColumn Binding="{Binding Name}" Header="{x:Static p:Resources.Title}" Width="100"/>
+                    <DataGridTextColumn Binding="{Binding Weight}" Header="{x:Static p:Resources.Weight}" Width="100"/>
+                    <DataGridTextColumn Binding="{Binding Price}" Header="{x:Static p:Resources.Price}" Width="100"/>
+                    <DataGridTextColumn Binding="{Binding Amount}" Header="{x:Static p:Resources.Quantity}" Width="100"/>
+                    <DataGridTextColumn Binding="{Binding Category}" Header="{x:Static p:Resources.Category}" Width="100"/>
                 </DataGrid.Columns>
             </DataGrid>
         </Border>
@@ -30,10 +31,13 @@
                 <DropShadowEffect BlurRadius="30" Color="LightGray" ShadowDepth="0"/>
             </Border.Effect>
         </Border>
-        <Label Content="Поиск по названию" Margin="531,125,329,563"  FontSize="20" Width="220"/>
-        <TextBox x:Name="textBoxSearch" Margin="531,162,372,518" materialDesign:HintAssist.Hint="Введите название"  FontSize="20"/>
-        <Button Content="Поиск"  Margin="531,228,404,460"  Click="Button_Click_8" Width="145" Background="Green"/>
-        <Button Content="Добавить"  FontSize="15" Click="Button_Click_10" Background="Green" Margin="832,23,146,669" Height="Auto"/>
+        <Label Content="{x:Static p:Resources.Search_by_name}" Margin="531,125,329,563"  FontSize="20" Width="220"/>
+        <TextBox x:Name="textBoxSearch" Margin="531,162,372,518" materialDesign:HintAssist.Hint="{x:Static p:Resources.Enter_the_title}"  FontSize="20" Cursor="Arrow" TextChanged="textBoxSearch_TextChanged"/>
+        <Button Content="{x:Static p:Resources.Search}"  Margin="531,228,404,460"  Click="Button_Click_8" Width="145" Background="Green" Cursor="Hand"/>
+        <Button Content="{x:Static p:Resources.Add}"  FontSize="15" Click="Button_Click_10" Background="Green" Margin="832,23,146,669" Height="Auto" Cursor="Hand"/>
+        <Button Content="{x:Static p:Resources.Menu}"  FontSize="15" Click="Button_Click_11" Background="Green" Margin="713,56,265,632" Height="Auto"/>
+        <Button Content="{x:Static p:Resources.Export}"  FontSize="15" Click="updateButton_Click2" Background="Green" Margin="832,56,119,632" Height="Auto" Cursor="Hand"/>
+
 
 
     </Grid>

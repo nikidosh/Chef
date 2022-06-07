@@ -26,10 +26,26 @@ namespace Chef_administrator
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            Dishes obj = new Dishes();
+            obj.Show();
+            this.Close();
         }
 
         private void Button_Click1(object sender, RoutedEventArgs e)
+        {
+            Ingredients obj = new Ingredients();
+            obj.Show();
+            this.Close();
+        }
+
+        private void Button_Click2(object sender, RoutedEventArgs e)
+        {
+            Category obj = new Category();
+            obj.Show();
+            this.Close();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
         {
 
         }

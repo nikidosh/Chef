@@ -1,4 +1,3 @@
-D:\Visual проекты\С# проекты\Chef_administrator\Chef_administrator\obj\Debug\Chef_administrator.csprojAssemblyReference.cache
 D:\Visual проекты\С# проекты\Chef_administrator\Chef_administrator\obj\Debug\MainWindow.g.cs
 D:\Visual проекты\С# проекты\Chef_administrator\Chef_administrator\obj\Debug\App.g.cs
 D:\Visual проекты\С# проекты\Chef_administrator\Chef_administrator\obj\Debug\Chef_administrator_MarkupCompile.cache
@@ -38,3 +37,12 @@ D:\Visual проекты\С# проекты\Chef_administrator\Chef_administrato
 D:\Visual проекты\С# проекты\Chef_administrator\Chef_administrator\obj\Debug\Ingredients.baml
 D:\Visual проекты\С# проекты\Chef_administrator\Chef_administrator\obj\Debug\MainMenu.g.cs
 D:\Visual проекты\С# проекты\Chef_administrator\Chef_administrator\obj\Debug\MainMenu.baml
+D:\Visual проекты\С# проекты\Chef_administrator\Chef_administrator\obj\Debug\Chef_administrator.csproj.AssemblyReference.cache
+D:\Visual проекты\С# проекты\Chef_administrator\Chef_administrator\obj\Debug\Chef_administrator.csproj.SuggestedBindingRedirects.cache
+D:\Visual проекты\С# проекты\Chef_administrator\Chef_administrator\obj\Debug\AddIngredients.g.cs
+D:\Visual проекты\С# проекты\Chef_administrator\Chef_administrator\obj\Debug\AddIngredients.baml
+D:\Visual проекты\С# проекты\Chef_administrator\Chef_administrator\obj\Debug\AddCategory.g.cs
+D:\Visual проекты\С# проекты\Chef_administrator\Chef_administrator\obj\Debug\AddCategory.baml
+D:\Visual проекты\С# проекты\Chef_administrator\Chef_administrator\bin\Debug\en\Chef_administrator.resources.dll
+D:\Visual проекты\С# проекты\Chef_administrator\Chef_administrator\obj\Debug\Chef_administrator.Properties.Resources.en.resources
+D:\Visual проекты\С# проекты\Chef_administrator\Chef_administrator\obj\Debug\en\Chef_administrator.resources.dll

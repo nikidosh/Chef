@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -145,6 +146,47 @@ namespace Chef_administrator
             AddDishes obj = new AddDishes();
             obj.Show();
             this.Close();
+        }
+
+        private void Button_Click_11(object sender, RoutedEventArgs e)
+        {
+            MainMenu obj = new MainMenu();
+            obj.Show();
+            this.Close();
+        }
+        private void updateButton_Click2(object sender, RoutedEventArgs e)
+        {
+            goodsGrid.SelectAllCells();
+            goodsGrid.ClipboardCopyMode = DataGridClipboardCopyMode.IncludeHeader;
+            ApplicationCommands.Copy.Execute(null, goodsGrid);
+            goodsGrid.UnselectAllCells();
+            var result = (string)Clipboard.GetData(DataFormats.Text);
+            dynamic wordApp = null;
+            try
+            {
+                var sw = new StreamWriter($"{Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory)}\\отчет.doc");
+                sw.WriteLine(result);
+                sw.Close();
+                //var proc = Process.Start("export.doc");
+                Type wordType = Type.GetTypeFromProgID("Word.Application");
+                wordApp = Activator.CreateInstance(wordType);
+                wordApp.Documents.Add($"{Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory)}\\отчет.doc");
+                wordApp.ActiveDocument.Range.ConvertToTable(1, goodsGrid.Items.Count, goodsGrid.Columns.Count);
+                MessageBox.Show("Отчет успешно создан! \n Находится на рабочем столе!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                if (wordApp != null)
+                {
+                    wordApp.Quit();
+                }
+            }
+        }
+
+        private void textBoxSearch_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

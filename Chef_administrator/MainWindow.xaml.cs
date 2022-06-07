@@ -31,7 +31,7 @@ namespace Chef_administrator
         {
             SqlConnection connection = null;
             var loginuser = textBoxLogin.Text;
-            var passUser = passBox.Password;
+            var passUser = passBox.Text;
 
             SqlDataAdapter adapter = new SqlDataAdapter();
             DataTable table = new DataTable();
@@ -56,5 +56,21 @@ namespace Chef_administrator
             }
         }
 
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("ru-RU");
+            MainWindow obj = new MainWindow();
+            this.Close();
+            obj.Show();
+
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("en");
+            MainWindow obj=new MainWindow();
+            this.Close();
+            obj.Show();
+        }
     }
 }

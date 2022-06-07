@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
+using System.Data.Common;
 using System.Data.OleDb;
 using System.Data.SqlClient;
 using System.Globalization;
@@ -31,7 +32,7 @@ namespace Chef_administrator
         public string s2;
         public string s3;
 
-     
+
         System.Data.DataTable ingredTable;
 
         public AddDishes()
@@ -83,8 +84,17 @@ namespace Chef_administrator
                 if (connection != null)
                     connection.Close();
             }
+            SqlCommand command4 = new SqlCommand("select Name from Category", connection);
+            connection.Open();
+            DbDataReader reader = command4.ExecuteReader();
+            while (reader.Read())
+            {
+                TypeList.Items.Add((string)reader["Name"]);
+            }
+            connection.Close();
         }
-          private void UpdateDB()
+      
+        private void UpdateDB()
         {
             SqlCommandBuilder comandbuilder = new SqlCommandBuilder(adapter);
             adapter.Update(ingredTable);
@@ -97,7 +107,7 @@ namespace Chef_administrator
         {
 
         }
-        
+
         private void ButtonAdd_Click_8(object sender, RoutedEventArgs e)
         {
             SqlConnection connection = null;
@@ -110,7 +120,7 @@ namespace Chef_administrator
             var type3 = s3;
             var value = float.Parse(textBoxWeight.Text, CultureInfo.InvariantCulture);
             var name1 = TypeList3.Text;
-            
+
             string query = $"INSERT INTO Dishes(Name, Weight, Price, Amount, Category) values('{name}','{value}','{price}','{amount}','{type}')";
 
 
@@ -135,7 +145,7 @@ namespace Chef_administrator
                         adapter.Fill(ingredTable);
                         connection = new SqlConnection(connectionString);*/
 
-         
+            //если ингредиенты исп то минусует количество созданных блюд
             string sql = $"UPDATE Ingredients SET Count=Count-{amount} WHERE Count>0 AND Name='{type1}';";
             connection = new SqlConnection(connectionString);
             SqlCommand command1 = new SqlCommand(sql, connection);
@@ -164,7 +174,8 @@ namespace Chef_administrator
             adapter.Fill(ingredTable);
             connection = new SqlConnection(connectionString);
 
-            string sql4 = $"DELETE FROM Ingredients WHERE Count=0 AND Name='{type1}';";
+            //удаляет если элемент 0 ии меньше
+            string sql4 = $"DELETE FROM Ingredients WHERE Count=0 AND Count<0 AND Name='{type1}';";
             connection = new SqlConnection(connectionString);
             SqlCommand command4 = new SqlCommand(sql4, connection);
             adapter = new SqlDataAdapter(command4);
@@ -173,7 +184,7 @@ namespace Chef_administrator
             adapter.Fill(ingredTable);
             connection = new SqlConnection(connectionString);
 
-            string sql5 = $"DELETE FROM Ingredients WHERE Count=0 AND Name='{type2}';";
+            string sql5 = $"DELETE FROM Ingredients WHERE Count=0 AND Count<0 AND Name='{type2}';";
             connection = new SqlConnection(connectionString);
             SqlCommand command5 = new SqlCommand(sql5, connection);
             adapter = new SqlDataAdapter(command5);
@@ -182,7 +193,7 @@ namespace Chef_administrator
             adapter.Fill(ingredTable);
             connection = new SqlConnection(connectionString);
 
-            string sql6 = $"DELETE FROM Ingredients WHERE Count=0 AND Name='{type3}';";
+            string sql6 = $"DELETE FROM Ingredients WHERE Count=0 AND Count<0 AND Name='{type3}';";
             connection = new SqlConnection(connectionString);
             SqlCommand command6 = new SqlCommand(sql6, connection);
             adapter = new SqlDataAdapter(command6);
@@ -191,7 +202,7 @@ namespace Chef_administrator
             adapter.Fill(ingredTable);
             connection = new SqlConnection(connectionString);
 
-            
+            //Проверка на сущ элемент
             DataTable table = new DataTable();
             string sql7 = $"SELECT * FROM Ingredients WHERE Name = '{type1}'";
             SqlCommand command7 = new SqlCommand(sql7, connection);
@@ -201,13 +212,13 @@ namespace Chef_administrator
             DataTable table1 = new DataTable();
             string sql8 = $"SELECT * FROM Ingredients WHERE Name = '{type2}'";
             SqlCommand command8 = new SqlCommand(sql8, connection);
-            adapter.SelectCommand = command7;
+            adapter.SelectCommand = command8;
             adapter.Fill(table1);
 
             DataTable table2 = new DataTable();
             string sql9 = $"SELECT * FROM Ingredients WHERE Name = '{type3}'";
             SqlCommand command9 = new SqlCommand(sql9, connection);
-            adapter.SelectCommand = command7;
+            adapter.SelectCommand = command9;
             adapter.Fill(table2);
 
             connection = new SqlConnection(connectionString);
@@ -221,32 +232,37 @@ namespace Chef_administrator
             SqlCommand command = new SqlCommand(query, connection);
 
             connection.Open();
-            
 
 
-           
-            if (command.ExecuteNonQuery() == 1 && table.Rows.Count == 1)
+
+
+            if ( table.Rows.Count == 1 && table1.Rows.Count == 1 && table2.Rows.Count == 1)
             {
-                MessageBox.Show("Товар успешно создан", "Успех!");
-                Dishes good = new Dishes();
-                good.Show();
-                this.Close();
+                if(command.ExecuteNonQuery() == 1)
+                {
+                    MessageBox.Show("Товар успешно создан", "Успех!");
+                    Dishes good = new Dishes();
+                    good.Show();
+                    this.Close();
+                }
+             
             }
             else
-            { 
-                MessageBox.Show("Товар не создан");
+            {
+                MessageBox.Show("Товар не создан тк как у вас нет ингериентов");
 
-                this.Close();
+
             }
-            
+
         }
 
-       
+
 
         private void TypeList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            var item = (ComboBoxItem)TypeList.SelectedValue;
-            s = (string)item.Content;
+            // var item = (ComboBoxItem)TypeList.SelectedValue;
+            string selectedState = TypeList.SelectedItem.ToString();
+            s = selectedState;
         }
 
         private void TypeList_SelectionChanged2(object sender, SelectionChangedEventArgs e)
@@ -270,6 +286,12 @@ namespace Chef_administrator
         private void textBoxCount_TextChanged(object sender, TextChangedEventArgs e)
         {
 
+        }
+        private void ButtonAdd_Click_9(object sender, RoutedEventArgs e)
+        {
+            MainMenu obj = new MainMenu();
+            obj.Show();
+            this.Close();
         }
     }
 }
