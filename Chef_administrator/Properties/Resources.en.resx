@@ -129,11 +129,26 @@
   <data name="Add Ingredient" xml:space="preserve">
     <value>Add Ingredient</value>
   </data>
+  <data name="Adding a category. On the left is a field for entering the name of the category. Bottom The category button returns you to the category form, the add button adds the category you entered if there is no such category already, the Menu button returns you to the menu form. At the bottom there is a table with already existing categories." xml:space="preserve">
+    <value>Adding a category. On the left is a field for entering the name of the category. Bottom The category button returns you to the category form, the add button adds the category you entered if there is no such category already, the Menu button returns you to the menu form. At the bottom there is a table with already existing categories.</value>
+  </data>
+  <data name="Adding a dish" xml:space="preserve">
+    <value>Adding a dish. In the name you enter the name of the dish you want to create, in the weight you enter the weight of the dish you are creating, you specify any price for the dishes, in quantity you specify how many dishes you want to create. Then you select the category that your dish belongs to, and from the three drop-down lists you select the ingredients that your dish will consist of. Next, you click add and it is added if there are ingredients, otherwise you will be given a message. Menu button you go to the menu form. On the right there is a table with ingredients to make it easier for you to choose the right ingredients.</value>
+  </data>
+  <data name="Adding an ingredient. In the name you enter the name of the ingredient you want to create, in the quantity you specify how many ingredients you want to create. Next, you click add and it is added if there are no such ingredients, otherwise you will be given a message. Menu button you go to the menu form. On the right there is a table with ingredients to make it easier for you to choose the right ingredients." xml:space="preserve">
+    <value>Adding an ingredient. In the name you enter the name of the ingredient you want to create, in the quantity you specify how many ingredients you want to create. Next, you click add and it is added if there are no such ingredients, otherwise you will be given a message. Menu button you go to the menu form. On the right there is a table with ingredients to make it easier for you to choose the right ingredients.</value>
+  </data>
   <data name="Authorization" xml:space="preserve">
     <value>Authorization</value>
   </data>
+  <data name="Authorization. The user fills in the fields with valid data and presses the Login button. At the top left there is a choice of the language of Russian and English. When you click on Russian, the language will be Russian, if English then English. At the bottom left there is a Help button, well, I think you yourself understand what it is for since you have already come here." xml:space="preserve">
+    <value>Authorization. The user fills in the fields with valid data and presses the Login button. At the top left there is a choice of the language of Russian and English. When you click on Russian, the language will be Russian, if English then English. At the bottom left there is a Help button, well, I think you yourself understand what it is for since you have already come here.</value>
+  </data>
   <data name="Cabbage" xml:space="preserve">
     <value>Cabbage</value>
+  </data>
+  <data name="Categories. On the left you will see a table with all the created categories. Buttons on the right. The add button allows you to go to the add ingredient form, the delete button allows you to delete ingredients in the table, the Menu button allows you to go to the Menu form." xml:space="preserve">
+    <value>Categories. On the left you will see a table with all the created categories. Buttons on the right. The add button allows you to go to the add ingredient form, the delete button allows you to delete ingredients in the table, the Menu button allows you to go to the Menu form.</value>
   </data>
   <data name="Category" xml:space="preserve">
     <value>Category</value>
@@ -147,6 +162,9 @@
   <data name="Dishes" xml:space="preserve">
     <value>Dishes</value>
   </data>
+  <data name="Dishes_text" xml:space="preserve">
+    <value>Dishes. On the left you will see a table with all created dishes. Buttons on the right. The Sort by Weight button allows you to sort dishes by weight, the Add button allows you to go to the add dish form, the Delete button allows you to delete dishes in the table, the Sort by Price button allows you to sort dishes by price, the Menu button allows you to go to the Menu form, The Export button allows you to export the table to Word. Just below you can enter the name of the dish and you will find such a dish if it is in the table</value>
+  </data>
   <data name="Enter" xml:space="preserve">
     <value>Enter</value>
   </data>
@@ -159,6 +177,9 @@
   <data name="Ingredients" xml:space="preserve">
     <value>Ingredients</value>
   </data>
+  <data name="Ingredients. On the left you will see a table with all created dishes. Buttons on the right. The add button allows you to go to the add ingredient form, the delete button allows you to delete ingredients in the table, the Menu button allows you to go to the Menu form. A little lower you can enter the name of the ingredient and you will find such an ingredient if it is in the table." xml:space="preserve">
+    <value>Ingredients. On the left you will see a table with all created dishes. Buttons on the right. The add button allows you to go to the add ingredient form, the delete button allows you to delete ingredients in the table, the Menu button allows you to go to the Menu form. A little lower you can enter the name of the ingredient and you will find such an ingredient if it is in the table.</value>
+  </data>
   <data name="Login" xml:space="preserve">
     <value>Login</value>
   </data>
@@ -167,6 +188,9 @@
   </data>
   <data name="Password" xml:space="preserve">
     <value>Password</value>
+  </data>
+  <data name="Perfect Menu. In the menu you can choose Dishes, Ingredients, Categories. When you click on the Dishes button, you will go to the dish form, if on the Ingredients button, then on the Ingredients form, if on the Category button, then on the Category form." xml:space="preserve">
+    <value>Perfect Menu. In the menu you can choose Dishes, Ingredients, Categories. When you click on the Dishes button, you will go to the dish form, if on the Ingredients button, then on the Ingredients form, if on the Category button, then on the Category form.</value>
   </data>
   <data name="Potatoes" xml:space="preserve">
     <value>Potatoes</value>

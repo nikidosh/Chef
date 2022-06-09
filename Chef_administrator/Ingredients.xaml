@@ -16,10 +16,9 @@
             </DataGrid.Columns>
 
         </DataGrid>
-        <Button Content="{x:Static p:Resources.Update}"  FontSize="15" Click="updateButton_Click" Background="Green" Margin="444,50,-164,589" Height="Auto" Cursor="Hand"/>
+        <Button Content="{x:Static p:Resources.Add}"  FontSize="15" Click="AddButton_Click" Background="Green" Margin="444,50,-164,589" Height="Auto" Cursor="Hand"/>
         <Button  Content="{x:Static p:Resources.Menu}"  FontSize="15" Click="updateButton_Click1" Background="Green" Margin="444,103,-164,549" Height="Auto"/>
         <Button Content="{x:Static p:Resources.Delete}"  FontSize="15" Click="deleteButton_Click" Background="Green" Margin="444,150,-164,501" Height="Auto"/>
-        <Button Content="{x:Static p:Resources.Add}"  FontSize="15" Click="AddButton_Click" Background="Green" Margin="584,66,-335,559" Height="Auto" Cursor="Hand"/>
         <Label Content="{x:Static p:Resources.Search_by_name}" Margin="444,229,-321,401"  FontSize="20"/>
         <TextBox x:Name="textBoxSearch" Margin="444,288,-291,352"  FontSize="20" Cursor="Arrow"/>
         <Button Content="{x:Static p:Resources.Search}"  Margin="448,349,-178,287"  Click="Button_Click_8" Width="145" Background="Green" Cursor="Hand"/>

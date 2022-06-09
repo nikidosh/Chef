@@ -119,7 +119,7 @@ namespace Chef_administrator
             if (command.ExecuteNonQuery() == 1)
             {
                 
-                    MessageBox.Show("Ингредиент создан успешно создан", "Успех!");
+                    MessageBox.Show("Категория создана успешно", "Успех!");
                     Category good = new Category();
                     good.Show();
                     this.Close();
@@ -128,7 +128,7 @@ namespace Chef_administrator
             }
             else 
             {
-                MessageBox.Show("Ингредиент не создан");
+                MessageBox.Show("Категория не создана");
 
 
             }

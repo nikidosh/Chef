@@ -9,10 +9,9 @@
                 xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         Title="Dishes" Height="720" Width="1080" Loaded="Window_Loaded">
     <Grid Background="White" Height="720" Width="1080">
-        <Button Content="{x:Static p:Resources.Update}"  FontSize="15" Click="updateButton_Click" Background="Green" Margin="511,25,444,669" Height="Auto" Cursor="Hand"/>
-            <Button Content="{x:Static p:Resources.Delete}"   FontSize="15" Click="deleteButton_Click" Background="Green" Margin="939,23,38,669" Height="Auto"/>
-            <Button Content="{x:Static p:Resources.Sorted_by_weight}"  FontSize="15" Click="Button_Click_2" Background="Green" Margin="641,25,253,669" Height="Auto" Cursor="Hand"/>
-            <Button Content="{x:Static p:Resources.Sort_by_price}"  FontSize="15" Click="Button_Click_1" Background="Green" Margin="511,62,383,626" Height="Auto"/>
+        <Button Content="{x:Static p:Resources.Delete}"   FontSize="15" Click="deleteButton_Click" Background="Green" Margin="939,23,38,663" Height="Auto" Cursor="Hand"/>
+        <Button Content="{x:Static p:Resources.Sorted_by_weight}"  FontSize="15" Click="Button_Click_2" Background="Green" Margin="511,23,253,665" Height="Auto" Cursor="Hand"/>
+        <Button Content="{x:Static p:Resources.Sort_by_price}"  FontSize="15" Click="Button_Click_1" Background="Green" Margin="511,62,383,626" Height="Auto"/>
 
         <Border x:Name="s1"  Background="White"   HorizontalAlignment="Left" Width="506" >
 
@@ -31,12 +30,12 @@
                 <DropShadowEffect BlurRadius="30" Color="LightGray" ShadowDepth="0"/>
             </Border.Effect>
         </Border>
-        <Label Content="{x:Static p:Resources.Search_by_name}" Margin="531,125,329,563"  FontSize="20" Width="220"/>
+        <Label Content="{x:Static p:Resources.Search_by_name}" Margin="531,125,290,563"  FontSize="20"/>
         <TextBox x:Name="textBoxSearch" Margin="531,162,372,518" materialDesign:HintAssist.Hint="{x:Static p:Resources.Enter_the_title}"  FontSize="20" Cursor="Arrow" TextChanged="textBoxSearch_TextChanged"/>
         <Button Content="{x:Static p:Resources.Search}"  Margin="531,228,404,460"  Click="Button_Click_8" Width="145" Background="Green" Cursor="Hand"/>
-        <Button Content="{x:Static p:Resources.Add}"  FontSize="15" Click="Button_Click_10" Background="Green" Margin="832,23,146,669" Height="Auto" Cursor="Hand"/>
-        <Button Content="{x:Static p:Resources.Menu}"  FontSize="15" Click="Button_Click_11" Background="Green" Margin="713,56,265,632" Height="Auto"/>
-        <Button Content="{x:Static p:Resources.Export}"  FontSize="15" Click="updateButton_Click2" Background="Green" Margin="832,56,119,632" Height="Auto" Cursor="Hand"/>
+        <Button Content="{x:Static p:Resources.Add}"  FontSize="15" Click="Button_Click_10" Background="Green" Margin="832,23,146,665" Height="Auto" Cursor="Hand"/>
+        <Button Content="{x:Static p:Resources.Menu}"  FontSize="15" Click="Button_Click_11" Background="Green" Margin="702,62,276,626" Height="Auto"/>
+        <Button Content="{x:Static p:Resources.Export}"  FontSize="15" Click="updateButton_Click2" Background="Green" Margin="832,62,119,626" Height="Auto" Cursor="Hand"/>
 
 
 

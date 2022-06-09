@@ -186,6 +186,36 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Photo\MainMenu.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="photo_2022-06-08_20-46-48.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MainMenu.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Autor.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Dishes.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Ingredients.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Category.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="AddCategory.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="AddDishes.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="AddIngredients.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.4.5.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.5.0\build\MaterialDesignThemes.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

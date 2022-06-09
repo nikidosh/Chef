@@ -46,3 +46,5 @@ D:\Visual проекты\С# проекты\Chef_administrator\Chef_administrato
 D:\Visual проекты\С# проекты\Chef_administrator\Chef_administrator\bin\Debug\en\Chef_administrator.resources.dll
 D:\Visual проекты\С# проекты\Chef_administrator\Chef_administrator\obj\Debug\Chef_administrator.Properties.Resources.en.resources
 D:\Visual проекты\С# проекты\Chef_administrator\Chef_administrator\obj\Debug\en\Chef_administrator.resources.dll
+D:\Visual проекты\С# проекты\Chef_administrator\Chef_administrator\obj\Debug\Reference.g.cs
+D:\Visual проекты\С# проекты\Chef_administrator\Chef_administrator\obj\Debug\Reference.baml

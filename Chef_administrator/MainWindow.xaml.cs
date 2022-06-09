@@ -72,5 +72,12 @@ namespace Chef_administrator
             this.Close();
             obj.Show();
         }
+
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+            Reference obj = new Reference();
+            this.Close();
+            obj.Show();
+        }
     }
 }

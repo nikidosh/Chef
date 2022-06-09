@@ -12,10 +12,9 @@
 
         <StackPanel Margin="0,0,-0.4,0">
             <TextBlock Text="{x:Static p:Resources.Menu}" FontSize="40" TextAlignment="Center" FontWeight="Bold" TextDecorations="{x:Null}"  />
-            <Button Content="{x:Static p:Resources.Dishes}" Margin=" 100  0 100 15" Background="Green" Click="Button_Click"/>
-            <Button Content="{x:Static p:Resources.Ingredients}" Margin=" 100  20 100 15"  Background="Green" Click="Button_Click1" Cursor="Hand"/>
-            <Button Content="{x:Static p:Resources.Category}" Margin=" 100  20 100 15"  Background="Green" Click="Button_Click2" Cursor="Hand"/>
-            <Button Content="{x:Static p:Resources.Reference}" Margin=" 100  20 100 15"  Background="Green" Cursor="Hand" Click="Button_Click_1"/>
+            <Button Content="{x:Static p:Resources.Dishes}" Margin=" 100  50 100 15" Background="Green" Click="Button_Click" Cursor="Hand"/>
+            <Button Content="{x:Static p:Resources.Ingredients}" Margin=" 100  50 100 15"  Background="Green" Click="Button_Click1" Cursor="Hand"/>
+            <Button Content="{x:Static p:Resources.Category}" Margin=" 100  50 100 15"  Background="Green" Click="Button_Click2" Cursor="Hand"/>
 
 
         </StackPanel>

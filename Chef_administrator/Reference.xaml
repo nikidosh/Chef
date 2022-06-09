@@ -9,6 +9,48 @@
         mc:Ignorable="d"
         Title="Reference" Height="720" Width="1080">
     <Grid>
-        <Label Content="{x:Static p:Resources.Reference}" HorizontalAlignment="Left" Margin="456,42,0,0" VerticalAlignment="Top" Width="317" FontSize="36"/>
+        <ScrollViewer>
+            <StackPanel Width="1080">
+                <Label Content="{x:Static p:Resources.Reference}" HorizontalAlignment="Left" Margin="456,42,0,0" VerticalAlignment="Top" Width="317" FontSize="40"/>
+                <StackPanel Background="Green" Orientation="Horizontal" Width="1079" Margin="0 50 0 0">
+                    <Image  Source="/Autor.jpg" Height="284" Width="472" Stretch="Fill" Visibility="Visible" HorizontalAlignment="Left" />
+                    <TextBlock Foreground="White" Margin="10 0 10 0" TextWrapping="Wrap"  Text="{x:Static p:Resources.Authorization__The_user_fills_in_the_fields_with_valid_data_and_presses_the_Login_button__At_the_top_left_there_is_a_choice_of_the_language_of_Russian_and_English__When_you_click_on_Russian__the_language_will_be_Russian__if_English_then_English__At_the_bottom_left_there_is_a_Help_button__well__I_think_you_yourself_understand_what_it_is_for_since_you_have_already_come_here_}" FontSize="22" Width="597"/>
+                </StackPanel>
+                <StackPanel Background="Green" Orientation="Horizontal"  Width="1079" Margin="0 50 0 0">
+                    <Image  Source="/Photo/MainMenu.jpg" Height="284" Width="472" Stretch="Fill" Visibility="Visible" HorizontalAlignment="Left" />
+                    <TextBlock  Foreground="White" Margin="10 0 10 0" TextWrapping="Wrap"  Text="{x:Static p:Resources.Perfect_Menu__In_the_menu_you_can_choose_Dishes__Ingredients__Categories__When_you_click_on_the_Dishes_button__you_will_go_to_the_dish_form__if_on_the_Ingredients_button__then_on_the_Ingredients_form__if_on_the_Category_button__then_on_the_Category_form_}" FontSize="22" Width="597"/>
+                </StackPanel>
+                <StackPanel Background="Green" Orientation="Horizontal"  Width="1079" Margin="0 50 0 0">
+                    <Image  Source="/Dishes.jpg" Height="284" Width="472" Stretch="Fill" Visibility="Visible" HorizontalAlignment="Left" />
+                    <TextBlock Foreground="White" Margin="10 0 10 0" TextWrapping="Wrap"  Text="{x:Static p:Resources.Dishes_text}" FontSize="22" Width="597"/>
+                </StackPanel>
+                <StackPanel Background="Green"  Orientation="Horizontal"  Width="1079" Margin="0 50 0 0">
+                    <Image  Source="/Ingredients.jpg" Height="284" Width="472" Stretch="Fill" Visibility="Visible" HorizontalAlignment="Left" />
+                    <TextBlock  Foreground="White" Margin="10 0 10 0" TextWrapping="Wrap"  Text="{x:Static p:Resources.Ingredients__On_the_left_you_will_see_a_table_with_all_created_dishes__Buttons_on_the_right__The_add_button_allows_you_to_go_to_the_add_ingredient_form__the_delete_button_allows_you_to_delete_ingredients_in_the_table__the_Menu_button_allows_you_to_go_to_the_Menu_form__A_little_lower_you_can_enter_the_name_of_the_ingredient_and_you_will_find_such_an_ingredient_if_it_is_in_the_table_}" FontSize="22" Width="597"/>
+                </StackPanel>
+                <StackPanel  Background="Green" Orientation="Horizontal"  Width="1079" Margin="0 50 0 0">
+                    <Image  Source="/Category.jpg" Height="284" Width="472" Stretch="Fill" Visibility="Visible" HorizontalAlignment="Left" />
+                    <TextBlock Foreground="White" Margin="10 0 10 0" TextWrapping="Wrap"  Text="{x:Static p:Resources.Categories__On_the_left_you_will_see_a_table_with_all_the_created_categories__Buttons_on_the_right__The_add_button_allows_you_to_go_to_the_add_ingredient_form__the_delete_button_allows_you_to_delete_ingredients_in_the_table__the_Menu_button_allows_you_to_go_to_the_Menu_form_}" FontSize="22" Width="597"/>
+                </StackPanel>
+                <StackPanel Background="Green"  Orientation="Horizontal"  Width="1079" Margin="0 50 0 0">
+                    <Image  Source="/AddCategory.jpg" Height="284" Width="472" Stretch="Fill" Visibility="Visible" HorizontalAlignment="Left" />
+                    <TextBlock Foreground="White" Margin="10 0 10 0" TextWrapping="Wrap"  Text="{x:Static p:Resources.Adding_a_category__On_the_left_is_a_field_for_entering_the_name_of_the_category__Bottom_The_category_button_returns_you_to_the_category_form__the_add_button_adds_the_category_you_entered_if_there_is_no_such_category_already__the_Menu_button_returns_you_to_the_menu_form__At_the_bottom_there_is_a_table_with_already_existing_categories_}" FontSize="22" Width="597"/>
+                </StackPanel>
+                <StackPanel Background="Green"  Orientation="Horizontal"  Width="1079" Margin="0 50 0 30">
+                    <Image  Source="/AddDishes.jpg" Height="284" Width="472" Stretch="Fill" Visibility="Visible" HorizontalAlignment="Left" />
+                    <TextBlock Foreground="White" Margin="10 0 10 0" TextWrapping="Wrap"  Text="{x:Static p:Resources.Adding_a_dish}" FontSize="22" Width="597"/>
+                </StackPanel>
+                <StackPanel Background="Green"  Orientation="Horizontal"  Width="1079" Margin="0 50 0 30">
+                    <Image  Source="/AddIngredients.jpg" Height="284" Width="472" Stretch="Fill" Visibility="Visible" HorizontalAlignment="Left" />
+                    <TextBlock Foreground="White" Margin="10 0 10 0" TextWrapping="Wrap"  Text="{x:Static p:Resources.Adding_an_ingredient__In_the_name_you_enter_the_name_of_the_ingredient_you_want_to_create__in_the_quantity_you_specify_how_many_ingredients_you_want_to_create__Next__you_click_add_and_it_is_added_if_there_are_no_such_ingredients__otherwise_you_will_be_given_a_message__Menu_button_you_go_to_the_menu_form__On_the_right_there_is_a_table_with_ingredients_to_make_it_easier_for_you_to_choose_the_right_ingredients_}" FontSize="22" Width="597"/>
+                </StackPanel>
+                <StackPanel  Orientation="Horizontal"  Width="1079" Margin="0 50 0 30">
+                    <Button Content="{x:Static p:Resources.Menu}"  FontSize="15" Click="Button_Click_11" Background="Green" Height="Auto" Cursor="Hand"/>
+                </StackPanel>
+
+            </StackPanel>
+
+        </ScrollViewer>
+
     </Grid>
 </Window>

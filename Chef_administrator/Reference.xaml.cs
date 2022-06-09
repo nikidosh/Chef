@@ -23,5 +23,11 @@ namespace Chef_administrator
         {
             InitializeComponent();
         }
+        private void Button_Click_11(object sender, RoutedEventArgs e)
+        {
+            MainMenu obj = new MainMenu();
+            obj.Show();
+            this.Close();
+        }
     }
 }

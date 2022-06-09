@@ -22,6 +22,8 @@
 
         <Button Content="Russian" Margin="46,38,930,610" Background="Green" Click="Button_Click_1" Cursor="Hand"/>
         <Button Content="English" Margin="46,75,930,560" Background="Green" Click="Button_Click_2" />
+        <Button Content="{x:Static p:Resources.Reference}" Margin="46,594,889,56"  Background="Green" Cursor="Hand" Click="Button_Click_5"/>
+
 
     </Grid>
 </Window>
